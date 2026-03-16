@@ -26,10 +26,7 @@ Since $\phi(\vec{r}, \vec{\Omega}, E, t)$ depends on the direction $\vec{\Omega}
 The scalar neutron flux is obtained by integrating the angular neutron flux over all directions:
 
 $$
-\phi(\vec{r}, E, t)
-=
-\int_{4\pi} d\Omega \,
-\phi(\vec{r}, \vec{\Omega}, E, t).
+\phi(\vec{r}, E, t) = \int_{4\pi} d\Omega \, \phi(\vec{r}, \vec{\Omega}, E, t).
 $$
 
 > (1.3)
