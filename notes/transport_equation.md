@@ -475,8 +475,7 @@ $$
 Therefore, the streaming term on the left-hand side of Eq. (1.21) can be rewritten as
 
 $$
-\vec{\Omega} \cdot \nabla\phi(x,\vec{\Omega},E)
-=
+\vec{\Omega} \cdot \nabla\phi(x,\vec{\Omega},E)=
 \mu
 \frac{\partial \phi(x,\mu,E)}{\partial x}.
 $$
