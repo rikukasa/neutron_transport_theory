@@ -413,8 +413,7 @@ k_{\text{eff}} =\frac{\displaystyle\int d\Omega' \int dE'\phi(\vec{r},\vec{\Omeg
 -
 \int d\Omega' \int dE'
 \phi(\vec{r},\vec{\Omega}',E')
-\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E)
-}.
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E)}.
 $$
 
 > (1.22)
