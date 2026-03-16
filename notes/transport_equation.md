@@ -311,7 +311,7 @@ $$
 
 > (1.18)
 
-Substituting Eq. (1.18) into Eq. (1.17), the **time-dependent neutron transport equation** is obtained:
+Substituting Eq. (1.18) into Eq. (1.17), the time-dependent neutron transport equation is obtained:
 
 $$
 \begin{aligned}
@@ -340,4 +340,182 @@ S(\vec{r},\vec{\Omega},E,t).
 $$
 
 > (1.19)
+
+
+
+### 1.4 Neutron Transport Equation for Weak Time Dependence
+
+Under normal reactor operating conditions, the time dependence of the neutron population in the core is very small.
+Therefore, reactor core analysis is often performed using a neutron transport calculation in which the time dependence is neglected.
+
+Neglecting the time derivative term in Eq. (1.19), the neutron transport equation becomes
+
+$$
+\begin{aligned}
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E)
++
+\Sigma_t(\vec{r},E)
+\phi(\vec{r},\vec{\Omega},E)
+&=
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E) \\
+&+
+\chi(E)
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\nu\Sigma_f(\vec{r},E')
++
+S(\vec{r},\vec{\Omega},E).
+\end{aligned}
+$$
+
+> (1.20)
+
+Since the time dependence is neglected, the neutron balance is not strictly satisfied in general.
+To enforce neutron balance, the fission production term is divided by the eigenvalue $k_{\text{eff}}$.
+
+Thus, the steady-state neutron transport equation becomes
+
+$$
+\begin{aligned}
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E)
++
+\Sigma_t(\vec{r},E)
+\phi(\vec{r},\vec{\Omega},E)
+&=
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E) \\
+&+
+\frac{\chi(E)}{4\pi k_{\text{eff}}}
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\nu\Sigma_f(\vec{r},E')
++
+S(\vec{r},\vec{\Omega},E).
+\end{aligned}
+$$
+
+> (1.21)
+
+Solving Eq. (1.21) with respect to $k_{\text{eff}}$ yields
+
+$$
+k_{\text{eff}} =
+\frac{
+\displaystyle
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\nu\Sigma_f(\vec{r},E')
++
+S(\vec{r},\vec{\Omega},E)
+}{
+\displaystyle
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E)
++
+\Sigma_t(\vec{r},E)\phi(\vec{r},\vec{\Omega},E)
+-
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E)
+}.
+$$
+
+> (1.22)
+
+The numerator represents the neutron production due to fission.
+The first term in the denominator represents neutron loss due to leakage, while the remaining terms represent neutron loss due to absorption.
+
+Therefore,
+
+- $k_{\text{eff}} < 1$ : subcritical
+- $k_{\text{eff}} = 1$ : critical
+- $k_{\text{eff}} > 1$ : supercritical
+
+---
+
+### 1.5 Direction Cosines
+
+The flight direction vector $\vec{\Omega}$ must satisfy
+
+$$
+\|\vec{\Omega}\|
+=
+\sqrt{\Omega_x^2 + \Omega_y^2 + \Omega_z^2}
+=
+1.
+$$
+
+> (1.23)
+
+In the Cartesian coordinate system, the streaming term in the neutron transport equation (Eq. (1.21)) can be written as
+
+$$
+\begin{aligned}
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E)
+&=
+(\Omega_x,\Omega_y,\Omega_z)
+\cdot
+\left(
+\frac{\partial \phi}{\partial x},
+\frac{\partial \phi}{\partial y},
+\frac{\partial \phi}{\partial z}
+\right) \\
+&=
+\Omega_x \frac{\partial \phi}{\partial x}
++
+\Omega_y \frac{\partial \phi}{\partial y}
++
+\Omega_z \frac{\partial \phi}{\partial z}.
+\end{aligned}
+$$
+
+> (1.24)
+
+
+
+### 1.6 One-Dimensional Slab Geometry
+
+In the case of a one-dimensional slab geometry, the neutron flight direction can be expressed by the angle $\theta$ between the flight direction and the $x$-axis, as illustrated in Figure 2-1. The angle satisfies
+
+$$
+0 \le \theta \le \pi .
+$$
+
+In this case, the direction vector $\vec{\Omega}$ can be represented by the scalar quantity
+
+$$
+\mu = \cos \theta .
+$$
+
+Therefore, the streaming term on the left-hand side of Eq. (1.21) can be rewritten as
+
+$$
+\vec{\Omega} \cdot \nabla
+\phi(x,\vec{\Omega},E)
+=
+\mu
+\frac{\partial \phi(x,\mu,E)}{\partial x}.
+$$
+
+> (1.25)
+
+For simplicity, the right-hand side of Eq. (1.21) is represented by the neutron source term $Q(x,\mu,E)$.
+Using Eq. (1.25), Eq. (1.21) can be written as
+
+$$
+\mu
+\frac{\partial \phi(x,\mu,E)}{\partial x}
++
+\Sigma_t(x,E)\phi(x,\mu,E)
+=
+Q(x,\mu,E).
+$$
+
+> (1.26)
 >
