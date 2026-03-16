@@ -201,3 +201,153 @@ $$
 > (1.14)
 
 where $S$ denotes the number of neutrons produced per unit time by an external source.
+
+
+### 1.3 Time-Dependent Neutron Transport Equation
+
+From the collision contribution in Eq. (1.7), the scattering contribution in Eq. (1.9), the fission contribution in Eq. (1.12), and the external source contribution in Eq. (1.14), the number of neutrons at time $t+\Delta t$ within the spatial volume $dV$ around $\vec{r}+v\Delta t \vec{\Omega}$, traveling in directions within the solid angle $d\Omega$ around $\vec{\Omega}$, and having energies within the interval $dE$ around $E$ can be written as
+
+$$
+\begin{aligned}
+&N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)dV d\Omega dE \\
+&= N(\vec{r},\vec{\Omega},E,t)
+\left(
+1-\Sigma_t(\vec{r}'',E,t)v\Delta t
+\right)
+dV d\Omega dE \\
+&+ \int d\Omega' \int dE'
+v' \Delta t
+N(\vec{r}'',\vec{\Omega}',E',t)
+dV'
+\Sigma_s(\vec{r}'',\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t)
+d\Omega dE \\
+&+ \int d\Omega' \int dE'
+v' \Delta t
+N(\vec{r}'',\vec{\Omega}',E',t)
+dV'
+\frac{\nu \Sigma_f(\vec{r}'',E',t)}{4\pi}
+\chi(E)
+d\Omega dE \\
+&+ \Delta t
+S(\vec{r}',\vec{\Omega},E,t)
+dV d\Omega dE .
+\end{aligned}
+$$
+
+> (1.15)
+
+When $\Delta t \rightarrow 0$, we have
+
+$$
+\vec{r}=\vec{r}'=\vec{r}'', \quad dV=dV', \quad t'=t .
+$$
+
+Thus Eq. (1.15) can be rewritten as
+
+$$
+\begin{aligned}
+\frac{
+N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
+-
+N(\vec{r},\vec{\Omega},E,t)
+}{\Delta t}
+&+
+v N(\vec{r},\vec{\Omega},E,t)\Sigma_t(\vec{r},E,t) \\
+&=
+\int d\Omega' \int dE'
+v' N(\vec{r},\vec{\Omega}',E',t)
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t) \\
+&+
+\chi(E)
+\int d\Omega' \int dE'
+v' N(\vec{r},\vec{\Omega}',E',t)
+\frac{\nu \Sigma_f(\vec{r},E',t)}{4\pi}.
+\end{aligned}
+$$
+
+> (1.16)
+
+Using the neutron flux
+
+$$
+\phi(\vec{r},\vec{\Omega},E,t)=vN(\vec{r},\vec{\Omega},E,t),
+$$
+
+Eq. (1.16) becomes
+
+$$
+\begin{aligned}
+\frac{
+N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
+-
+N(\vec{r},\vec{\Omega},E,t)
+}{\Delta t}
+&+
+\phi(\vec{r},\vec{\Omega},E,t)
+\Sigma_t(\vec{r},E,t) \\
+&=
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E',t)
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t) \\
+&+
+\chi(E)
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E',t)
+\frac{\nu \Sigma_f(\vec{r},E',t)}{4\pi} \\
+&+
+S(\vec{r},\vec{\Omega},E,t).
+\end{aligned}
+$$
+
+> (1.17)
+
+For $\Delta t \rightarrow 0$, the first term on the left-hand side becomes
+
+$$
+\frac{
+N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
+-
+N(\vec{r},\vec{\Omega},E,t)
+}{\Delta t}
+=
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E,t)
++
+\frac{1}{v}
+\frac{\partial
+\phi(\vec{r},\vec{\Omega},E,t)
+}{\partial t}.
+$$
+
+> (1.18)
+
+Substituting Eq. (1.18) into Eq. (1.17), the **time-dependent neutron transport equation** is obtained:
+
+$$
+\begin{aligned}
+\vec{\Omega}\cdot\nabla
+\phi(\vec{r},\vec{\Omega},E,t)
++
+\frac{1}{v}
+\frac{\partial
+\phi(\vec{r},\vec{\Omega},E,t)
+}{\partial t}
++
+\Sigma_t(\vec{r},E,t)
+\phi(\vec{r},\vec{\Omega},E,t)
+&=
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E',t)
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t) \\
+&+
+\chi(E)
+\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E',t)
+\frac{\nu \Sigma_f(\vec{r},E',t)}{4\pi} \\
+&+
+S(\vec{r},\vec{\Omega},E,t).
+\end{aligned}
+$$
+
+> (1.19)
+>
