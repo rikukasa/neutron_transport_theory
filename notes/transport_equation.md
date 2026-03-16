@@ -426,11 +426,7 @@ Therefore,
 The flight direction vector $\vec{\Omega}$ must satisfy
 
 $$
-\|\vec{\Omega}\|
-=
-\sqrt{\Omega_x^2 + \Omega_y^2 + \Omega_z^2}
-=
-1.
+\|\vec{\Omega}\|=\sqrt{\Omega_x^2 + \Omega_y^2 + \Omega_z^2}=1.
 $$
 
 > (1.23)
