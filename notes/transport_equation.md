@@ -10,6 +10,11 @@ N(\vec{r}, \vec{\Omega}, E, t)\, dV\, d\Omega\, dE
 \tag{1},
 $$
 
+$$
+
+
+$$
+
 where $N(\vec{r}, \vec{\Omega}, E, t)$ is the neutron density with energy $E$ traveling in direction $\vec{\Omega}$ at position $\vec{r}$ and time $t$.
 
 In reactor physics, the number of neutrons passing through a unit area per unit time is an important quantity. Therefore, the neutron flux $\phi$ is commonly used, which is defined by multiplying the neutron density by the neutron speed $v$. The neutron flux can be written as
