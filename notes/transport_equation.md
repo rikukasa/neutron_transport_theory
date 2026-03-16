@@ -4,8 +4,11 @@
 中性子密度を $N$、速度を $v$ とすると、角中性子束 $\phi$ は次のように定義されます。
 
 $$
-\phi(\vec{r}, \vec{\Omega}, E, t) = v N(\vec{r}, \vec{\Omega}, E, t)\tag{1}
+\phi(\vec{r}, \vec{\Omega}, E, t) = v N(\vec{r}, \vec{\Omega}, E, t)
+
 $$
+
+> (1)
 
 スカラー中性子束は、全方向（$4\pi$ ステラジアン）について積分することで得られます。
 
