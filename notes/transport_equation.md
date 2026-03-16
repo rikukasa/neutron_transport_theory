@@ -275,12 +275,8 @@ $$
 Eq. (1.16) becomes
 
 $$
-\begin{aligned}
-\frac{
-N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
--
-N(\vec{r},\vec{\Omega},E,t)
-}{\Delta t}
+\begin{aligned}\frac{
+N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)-N(\vec{r},\vec{\Omega},E,t)}{\Delta t}
 &+
 \phi(\vec{r},\vec{\Omega},E,t)
 \Sigma_t(\vec{r},E,t) \\
