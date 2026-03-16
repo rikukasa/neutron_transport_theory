@@ -404,16 +404,8 @@ $$
 Solving Eq. (1.21) with respect to $k_{\text{eff}}$ yields
 
 $$
-k_{\text{eff}} =\frac{\displaystyle\int d\Omega' \int dE'\phi(\vec{r},\vec{\Omega}',E')\nu\Sigma_f(\vec{r},E')+S(\vec{r},\vec{\Omega},E)}{
-\displaystyle
-\vec{\Omega}\cdot\nabla
-\phi(\vec{r},\vec{\Omega},E)
-+
-\Sigma_t(\vec{r},E)\phi(\vec{r},\vec{\Omega},E)
--
-\int d\Omega' \int dE'
-\phi(\vec{r},\vec{\Omega}',E')
-\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E)}.
+k_{\text{eff}} =\frac{\displaystyle\int d\Omega' \int dE'\phi(\vec{r},\vec{\Omega}',E')\nu\Sigma_f(\vec{r},E')+S(\vec{r},\vec{\Omega},E)}{\displaystyle\vec{\Omega}\cdot\nabla\phi(\vec{r},\vec{\Omega},E)+\Sigma_t(\vec{r},E)\phi(\vec{r},\vec{\Omega},E)-\int d\Omega' \int dE'
+\phi(\vec{r},\vec{\Omega}',E')\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E)}.
 $$
 
 > (1.22)
