@@ -299,10 +299,7 @@ $$
 For $\Delta t \rightarrow 0$, the first term on the left-hand side becomes
 
 $$
-\frac{N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
--
-N(\vec{r},\vec{\Omega},E,t)
-}{\Delta t}
+\frac{N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)-N(\vec{r},\vec{\Omega},E,t)}{\Delta t}
 =
 \vec{\Omega}\cdot\nabla
 \phi(\vec{r},\vec{\Omega},E,t)
