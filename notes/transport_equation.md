@@ -34,11 +34,7 @@ $$
 Because $\phi(\vec{r}, E, t)$ still depends on the energy $E$, it represents the energy-dependent neutron flux, also referred to as the neutron spectrum. By integrating the neutron spectrum over energy, the total neutron flux can be obtained as
 
 $$
-\phi(\vec{r}, t)
-
-=
-
-\int dE \, \phi(\vec{r}, E, t)
+\phi(\vec{r}, t) = \int dE \, \phi(\vec{r}, E, t).
 $$
 
 > (1.4)
