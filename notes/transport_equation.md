@@ -247,17 +247,13 @@ Thus Eq. (1.15) can be rewritten as
 $$
 \begin{aligned}
 \frac{
-N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)
--
+N(\vec{r}+v\Delta t\vec{\Omega},\vec{\Omega},E,t+\Delta t)-
 N(\vec{r},\vec{\Omega},E,t)
-}{\Delta t}
-&+
-v N(\vec{r},\vec{\Omega},E,t)\Sigma_t(\vec{r},E,t) \\
-&=
+}{\Delta t}&+
+v N(\vec{r},\vec{\Omega},E,t)\Sigma_t(\vec{r},E,t) \\&=
 \int d\Omega' \int dE'
 v' N(\vec{r},\vec{\Omega}',E',t)
-\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t) \\
-&+
+\Sigma_s(\vec{r},\vec{\Omega}' \rightarrow \vec{\Omega},E' \rightarrow E,t) \\&+
 \chi(E)
 \int d\Omega' \int dE'
 v' N(\vec{r},\vec{\Omega}',E',t)
