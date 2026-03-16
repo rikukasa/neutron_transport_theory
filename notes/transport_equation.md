@@ -490,8 +490,7 @@ $$
 \frac{\partial \phi(x,\mu,E)}{\partial x}
 +
 \Sigma_t(x,E)\phi(x,\mu,E)
-=
-Q(x,\mu,E).
+=Q(x,\mu,E).
 $$
 
 > (1.26)
