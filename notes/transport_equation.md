@@ -153,11 +153,7 @@ where
 If fission neutrons are emitted isotropically, the following relation holds:
 
 $$
-\Sigma_f(\vec{r}'',E',t')
-=
-\frac{1}{4\pi}
-\int d\Omega \,
-\Sigma_f(\vec{r}'',\vec{\Omega}',E',t')
+\Sigma_f(\vec{r}'',E',t')=\frac{1}{4\pi}\int d\Omega \,\Sigma_f(\vec{r}'',\vec{\Omega}',E',t')
 $$
 
 > (1.11)
