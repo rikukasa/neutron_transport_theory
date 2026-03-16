@@ -6,8 +6,10 @@
 The number of neutrons located at time $t$, within a spatial volume $dV$ around position $\vec{r}$, traveling in directions within a solid angle $d\Omega$ around $\vec{\Omega}$, and having energies within an interval $dE$ around energy $E$, can be expressed as
 
 $$
-adfafdafdadfafdf\tag{1}
+N(\vec{r}, \vec{\Omega}, E, t)\, dV\, d\Omega\, dE
+\tag{1}
 $$
+
 
 where $N(\vec{r}, \vec{\Omega}, E, t)$ is the neutron density with energy $E$ traveling in direction $\vec{\Omega}$ at position $\vec{r}$ and time $t$.
 
