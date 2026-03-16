@@ -343,7 +343,7 @@ $$
 
 
 
-### 1.4 Neutron Transport Equation for Weak Time Dependence
+### 1.4 Time-Indemendent Neutron Transport Equation
 
 Under normal reactor operating conditions, the time dependence of the neutron population in the core is very small.
 Therefore, reactor core analysis is often performed using a neutron transport calculation in which the time dependence is neglected.
@@ -404,8 +404,7 @@ $$
 Solving Eq. (1.21) with respect to $k_{\text{eff}}$ yields
 
 $$
-k_{\text{eff}} =
-\frac{
+k_{\text{eff}} =\frac{
 \displaystyle
 \int d\Omega' \int dE'
 \phi(\vec{r},\vec{\Omega}',E')
