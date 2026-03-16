@@ -1,57 +1,47 @@
 
-# 1. 中性子輸送方程式の導出
+## 1 Derivation of the Neutron Transport Equation
 
-## 1.1 中性子の表現
+### 1.1 Representation of Neutrons
 
-中性子の集団は、位置 $\vec{r}$、方向 $\vec{\Omega}$、エネルギー $E$、時間 $t$ の変数で記述されます。
-
-### 1.1.1 中性子密度
-
-微小体積 $dV$、微小立体角 $d\Omega$、微小エネルギー範囲 $dE$ 内に存在する中性子の数は次のように表されます。
+The number of neutrons located at time $t$, within a spatial volume $dV$ around position $\vec{r}$, traveling in directions within a solid angle $d\Omega$ around $\vec{\Omega}$, and having energies within an interval $dE$ around energy $E$, can be expressed as
 
 $$
-N(\vec{r}, \vec{\Omega}, E, t) \, dV d\Omega dE
+N(\vec{r}, \vec{\Omega}, E, t)\, dV\, d\Omega\, dE
 $$
 
-> (1)
+> (1.1)
 
-ここで、$N(\vec{r}, \vec{\Omega}, E, t)$ は、特定の状態（位置、方向、エネルギー）における**中性子密度**です。
+where $N(\vec{r}, \vec{\Omega}, E, t)$ is the neutron density with energy $E$ traveling in direction $\vec{\Omega}$ at position $\vec{r}$ and time $t$.
 
----
-
-### 1.1.2 中性子束（フラックス）の定義
-
-原子炉物理では、単位時間・単位面積あたりの中性子通過数である「中性子束」が重要な指標となります。
-
-#### 角中性子束 (Angular Flux)
-
-中性子密度に速度 $v$ を乗じることで、方向依存性を持つ**角中性子束** $\phi$ が定義されます。
+In reactor physics, the number of neutrons passing through a unit area per unit time is an important quantity. Therefore, the neutron flux $\phi$ is commonly used, which is defined by multiplying the neutron density by the neutron speed $v$. The neutron flux can be written as
 
 $$
-\phi(\vec{r}, \vec{\Omega}, E, t) = v \, N(\vec{r}, \vec{\Omega}, E, t)
+\phi(\vec{r}, \vec{\Omega}, E, t) = v\, N(\vec{r}, \vec{\Omega}, E, t).
 $$
 
-> (2)
+> (1.2)
 
-#### スカラー中性子束 (Scalar Flux)
+Since $\phi(\vec{r}, \vec{\Omega}, E, t)$ depends on the direction $\vec{\Omega}$, it is referred to as the angular neutron flux.
 
-角中性子束を全方向（$4\pi$ ステラジアン）について積分することで、方向依存性を除いた**スカラー中性子束**が得られます。
-
-$$
-\phi(\vec{r}, E, t) = \int_{4\pi} \phi(\vec{r}, \vec{\Omega}, E, t) \, d\Omega
-$$
-
-> (3)
-
-この $\phi(\vec{r}, E, t)$ はエネルギーに依存するため、**中性子スペクトル**とも呼ばれます。
-
-#### 全中性子束 (Total Flux)
-
-さらにエネルギー $E$ について積分を行うことで、その地点におけるすべてのエネルギー帯の中性子束を合計した**全中性子束**が求められます。
+The scalar neutron flux is obtained by integrating the angular neutron flux over all directions:
 
 $$
-\phi(\vec{r}, t) = \int_{0}^{\infty} \phi(\vec{r}, E, t) \, dE
+\phi(\vec{r}, E, t)
+=
+\int_{4\pi} d\Omega \,
+\phi(\vec{r}, \vec{\Omega}, E, t).
 $$
 
-> (4)
->
+> (1.3)
+
+Because $\phi(\vec{r}, E, t)$ still depends on the energy $E$, it represents the energy-dependent neutron flux, also referred to as the neutron spectrum. By integrating the neutron spectrum over energy, the total neutron flux can be obtained as
+
+$$
+\phi(\vec{r}, t)
+
+=
+
+\int dE \, \phi(\vec{r}, E, t)
+$$
+
+> (1.4)
